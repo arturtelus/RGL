@@ -1,0 +1,55 @@
+cmake_minimum_required(VERSION 3.15)
+
+project("RGL" VERSION 0.0.0.1
+	DESCRIPTION "RAII for opengl objects."
+	LANGUAGES C CXX
+)
+
+set(RGL_LIB_NAME "rgl")
+
+add_library(${RGL_LIB_NAME} 
+	"${PROJECT_SOURCE_DIR}/src/rgl_loader.cpp"
+	"${PROJECT_SOURCE_DIR}/src/rgl_objects.cpp"
+	"${PROJECT_SOURCE_DIR}/src/rgl_name.cpp"
+	"${PROJECT_SOURCE_DIR}/src/rgl_shader.cpp"
+	"${PROJECT_SOURCE_DIR}/src/rgl_shader_program.cpp"
+)
+add_Library(RGL::RGL ALIAS ${RGL_LIB_NAME})
+target_include_directories(${RGL_LIB_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/include")
+target_compile_features(${RGL_LIB_NAME} PUBLIC cxx_std_17)
+set_target_properties(${RGL_LIB_NAME} PROPERTIES
+	CXX_EXSTENSIONS OFF
+	CXX_STANDARD 17
+)
+target_compile_definitions(${RGL_LIB_NAME} PRIVATE 
+	$<$<CONFIG:Debug>:DEBUG>
+)
+
+find_package(GLEW CONFIG REQUIRED)
+include(FindOpenGL)
+target_link_libraries(${RGL_LIB_NAME} PUBLIC
+	GLEW::GLEW
+	OpenGL::GL
+)
+
+#Documentation
+find_package(Doxygen)
+if(DOXYGEN_FOUND)
+	if(DOXYGEN_DOT_EXECUTABLE)
+		set(USE_DOXYGEN_DOT "YES")
+	endif()
+	configure_file("${PROJECT_SOURCE_DIR}/Doxyfile.in" "${PROJECT_BINARY_DIR}/Doxyfile" @ONLY)
+	set(DOXYGEN_TARGET_NAME "BuildDocsDoxygen")
+	add_custom_target(${DOXYGEN_TARGET_NAME} ALL COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+		WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
+		COMMENT "Doxygen, generating docs."
+	VERBATIM)
+	add_custom_command(TARGET ${DOXYGEN_TARGET_NAME} POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy_directory "${PROJECT_BINARY_DIR}/docs/html" "${PROJECT_SOURCE_DIR}/docs"
+	COMMENT "Copy docs into project directory.")
+else()
+	message(STATUS "Doxygen not found!")
+endif()
+
+#TODO package
+#TODO installation

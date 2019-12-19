@@ -1,0 +1,9 @@
+<map id="ate::gl::GLobject" name="ate::gl::GLobject">
+<area shape="rect" id="node3" href="$classate_1_1gl_1_1_buffer.html" title="Object wrapper for opengl buffer object. " alt="" coords="347,5,446,32"/>
+<area shape="rect" id="node4" href="$classate_1_1gl_1_1_framebuffer.html" title="Opengl framebuffer with texture color, depth and stencil attachments. " alt="" coords="329,56,464,83"/>
+<area shape="rect" id="node5" href="$classate_1_1gl_1_1_render_buffer.html" title="ate::gl::RenderBuffer" alt="" coords="327,107,467,133"/>
+<area shape="rect" id="node6" href="$classate_1_1gl_1_1_shader.html" title="Object wrapper for opengl shader. " alt="" coords="343,157,450,184"/>
+<area shape="rect" id="node7" href="$classate_1_1gl_1_1_shader_program.html" title="Object manager for opengl shader program with fixed shader stages. " alt="" coords="319,208,475,235"/>
+<area shape="rect" id="node8" href="$classate_1_1gl_1_1_texture.html" title="Object wrapper for opengl 2d texture object. " alt="" coords="342,259,451,285"/>
+<area shape="rect" id="node9" href="$classate_1_1gl_1_1_vertex_array.html" title="ate::gl::VertexArray" alt="" coords="329,309,464,336"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="rgl::GLNames&lt; number_of_names &gt;" name="rgl::GLNames&lt; number_of_names &gt;">
+<area shape="rect" id="node2" href="$classrgl_1_1_buffers.html" title="Manages specific number of opengl buffer objects. " alt="" coords="224,5,363,47"/>
+<area shape="rect" id="node3" href="$classrgl_1_1_framebuffers.html" title="Manages specific number of opengl framebuffer objects. " alt="" coords="221,71,365,112"/>
+<area shape="rect" id="node4" href="$classrgl_1_1_program_pipelines.html" title="Manages specific number of opengl pipeline objects. " alt="" coords="217,136,369,177"/>
+<area shape="rect" id="node5" href="$classrgl_1_1_queries.html" title="Manages specific number of opengl query objects. " alt="" coords="221,201,365,243"/>
+<area shape="rect" id="node6" href="$classrgl_1_1_renderbuffers.html" title="Manages specific number of opengl renderbuffer objects. " alt="" coords="217,267,369,308"/>
+<area shape="rect" id="node7" href="$classrgl_1_1_samplers.html" title="Manages specific number of opengl buffer objects. " alt="" coords="216,332,371,373"/>
+<area shape="rect" id="node8" href="$classrgl_1_1_textures.html" title="Manages specific number of opengl buffer objects. " alt="" coords="219,397,368,439"/>
+<area shape="rect" id="node9" href="$classrgl_1_1_transform_feedbacks.html" title="Manages specific number of opengl buffer objects. " alt="" coords="211,463,376,504"/>
+<area shape="rect" id="node10" href="$classrgl_1_1_vertex_arrays.html" title="rgl::VertexArrays\&lt;\l number_of_names \&gt;" alt="" coords="221,528,365,569"/>
+</map>
